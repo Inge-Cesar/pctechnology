@@ -217,7 +217,6 @@
 					<h3>Acer Aspire 5 de 15.6″</h3>
 					<p>Bs.3,067.00</p>
 				</div>
-
 			</div>
 
 			<div class="swiper-button-next"></div>
@@ -227,8 +226,8 @@
 
 		<script>
 			const productSwiper = new Swiper('.product-carousel', {
-				slidesPerView: 4,
-				spaceBetween: 20,
+				slidesPerView: 1,
+				spaceBetween: 10,
 				loop: true,
 				navigation: {
 					nextEl: '.swiper-button-next',
@@ -243,8 +242,12 @@
 						slidesPerView: 2,
 						spaceBetween: 20,
 					},
-					1024: {
+					768: {
 						slidesPerView: 3,
+						spaceBetween: 20,
+					},
+					1024: {
+						slidesPerView: 4,
 						spaceBetween: 30,
 					},
 				},
@@ -279,11 +282,9 @@
 			.product-item img {
 				width: 100%;
 				max-width: 250px;
-				/* Tamaño máximo de las imágenes */
 				height: auto;
 				border-radius: 10px;
 				object-fit: cover;
-				/* Ajusta la imagen para cubrir el área sin distorsionarse */
 				margin: 0 auto;
 				transition: transform 0.3s ease;
 			}
@@ -294,18 +295,17 @@
 
 			.product-item h3 {
 				margin: 15px 0 10px;
-				font-size: 1.3em;
+				font-size: 1.2em;
 				font-weight: 600;
 				color: #333;
 			}
 
 			.product-item p {
-				font-size: 1.1em;
+				font-size: 1em;
 				color: #555;
 				font-weight: 500;
 			}
 
-			/* Estilo para los botones de navegación */
 			.product-carousel .swiper-button-next,
 			.product-carousel .swiper-button-prev {
 				position: absolute;
@@ -334,7 +334,6 @@
 				left: 10px;
 			}
 
-			/* Paginación centrada */
 			.product-carousel .swiper-pagination {
 				position: absolute;
 				bottom: 10px;
@@ -343,7 +342,6 @@
 				z-index: 10;
 			}
 
-			/* Mejora en la apariencia de los puntos de la paginación */
 			.swiper-pagination-bullet {
 				background-color: #ddd;
 				transition: background-color 0.3s ease;
